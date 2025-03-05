@@ -1,0 +1,61 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Github, Linkedin } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white p-6 flex flex-col items-center">
+      <header className="text-center my-10">
+        <h1 className="text-4xl font-bold">Vedant's Portfolio</h1>
+        <p className="text-gray-400 mt-2">Developer | Tech Enthusiast | Innovator</p>
+      </header>
+
+      <section className="w-full max-w-3xl">
+        <Card className="bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <CardContent>
+            <h2 className="text-2xl font-semibold">About Me</h2>
+            <p className="text-gray-300 mt-2">
+              Hey! I'm Vedant, a passionate developer who loves coding, technology,
+              and building innovative projects. Currently working on a robot that
+              can do yoga and act as a personal assistant!
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="w-full max-w-3xl mt-8">
+        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+          <Card className="bg-gray-800 p-4 rounded-xl">
+            <CardContent>
+              <h3 className="text-xl font-semibold">YogaBot</h3>
+              <p className="text-gray-300 text-sm">A robot that performs yoga and assists users.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-gray-800 p-4 rounded-xl">
+            <CardContent>
+              <h3 className="text-xl font-semibold">Personal Assistant AI</h3>
+              <p className="text-gray-300 text-sm">An AI-powered assistant that helps with daily tasks.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="w-full max-w-3xl mt-8 text-center">
+        <h2 className="text-2xl font-semibold">Contact Me</h2>
+        <div className="flex justify-center gap-4 mt-4">
+          <Button variant="outline" className="flex items-center gap-2">
+            <Mail size={18} /> Email
+          </Button>
+          <Button variant="outline" className="flex items-center gap-2">
+            <Github size={18} /> GitHub
+          </Button>
+          <Button variant="outline" className="flex items-center gap-2">
+            <Linkedin size={18} /> LinkedIn
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
+}
